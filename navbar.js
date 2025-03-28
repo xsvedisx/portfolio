@@ -13,12 +13,15 @@ window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
   const mobileMenu = document.querySelector(".mobile-menu");
 
-  if (window.scrollY >= window.innerHeight - 50) {
+  // Use a lower threshold for mobile devices
+  const threshold = window.innerWidth < 768 ? 5 : 50;
+
+  if (window.scrollY >= window.innerHeight - threshold) {
     navbar.classList.add("scrolledInvert");
     mobileMenu.classList.add("scrolledInvert");
   } else if (
-    window.scrollY >= 50 &&
-    window.scrollY <= window.innerHeight - 50
+    window.scrollY >= threshold &&
+    window.scrollY < window.innerHeight - threshold
   ) {
     navbar.classList.add("scrolled");
     navbar.classList.remove("scrolledInvert");
