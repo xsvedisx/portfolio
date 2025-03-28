@@ -10,7 +10,7 @@ function closeMenu() {
 }
 
 window.addEventListener("scroll", function () {
-  const navbar = document.querySelector(".navbar");
+  const navbar = document.querySelector("nav");
   const mobileMenu = document.querySelector(".mobile-menu");
 
   if (window.scrollY >= window.innerHeight - 50) {
