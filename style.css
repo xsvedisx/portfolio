@@ -33,7 +33,7 @@ nav {
 }
 
 .scrolled {
-  background-color: #070707;
+  background-color: #1100ff;
   padding: 10px 30px;
 }
 
@@ -205,7 +205,7 @@ a:active {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #fd0000;
+  background-color: #000000;
   gap: 30px;
   padding: 20px;
   z-index: 1;
