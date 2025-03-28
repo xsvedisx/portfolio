@@ -9,6 +9,12 @@ function closeMenu() {
   document.querySelector(".hamburger").classList.remove("active");
 }
 
+window.addEventListener("load", function () {
+  setTimeout(() => {
+    window.scrollTo(0, 1);
+  }, 100);
+});
+
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector("nav");
   const mobileMenu = document.querySelector(".mobile-menu");
