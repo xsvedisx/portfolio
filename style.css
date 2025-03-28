@@ -460,7 +460,7 @@ p {
 
 @media (max-width: 1024px) {
   nav {
-    padding: 20px;
+    padding: 15px 20px;
   }
   .navbar.scrolled {
     padding: 15px 20px;
