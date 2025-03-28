@@ -23,7 +23,7 @@ window.addEventListener("scroll", function () {
     navbar.classList.add("scrolled");
     navbar.classList.remove("scrolledInvert");
     mobileMenu.classList.remove("scrolledInvert");
-  } else if (this.window.scrollY < 50) {
+  } else {
     navbar.classList.remove("scrolled");
     navbar.classList.remove("scrolledInvert");
     mobileMenu.classList.remove("scrolledInvert");
