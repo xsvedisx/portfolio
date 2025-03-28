@@ -30,6 +30,8 @@ body {
   background-color: transparent;
   transition: background-color 0.3s ease-in-out, padding 0.5s ease-in-out,
     filter 0.3s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
 }
 
 .navbar.scrolled {
