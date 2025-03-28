@@ -23,10 +23,7 @@ window.addEventListener("scroll", function () {
   if (window.scrollY >= window.innerHeight - 50) {
     navbar.classList.add("scrolledInvert");
     mobileMenu.classList.add("scrolledInvert");
-  } else if (
-    window.scrollY >= 50 &&
-    window.scrollY <= window.innerHeight - 50
-  ) {
+  } else if (window.scrollY >= 50 && window.scrollY < window.innerHeight - 50) {
     navbar.classList.add("scrolled");
     navbar.classList.remove("scrolledInvert");
     mobileMenu.classList.remove("scrolledInvert");
