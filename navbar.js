@@ -31,14 +31,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// Calculate and set the --vh variable
-function setViewportHeight() {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty("--vh", `${vh}px`);
-}
-window.addEventListener("resize", setViewportHeight);
-setViewportHeight();
-
 document.querySelectorAll(".nav-links a, .mobile-menu a").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault(); // Prevent default anchor click behavior
