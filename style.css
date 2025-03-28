@@ -459,10 +459,7 @@ p {
 }
 
 @media (max-width: 1024px) {
-  .navbar {
-    padding: 20px;
-  }
-  .navbar.scrolled {
+  nav {
     padding: 15px 20px;
   }
   .nav-links {
