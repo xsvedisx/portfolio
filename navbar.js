@@ -12,15 +12,19 @@ function closeMenu() {
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector("nav");
   const mobileMenu = document.querySelector(".mobile-menu");
+  const height = window.innerHeight;
 
-  if (window.scrollY >= window.innerHeight - 50) {
+  if (window.scrollY >= height * 2 - 50) {
+    // Efter två fönsterhöjder
     navbar.classList.add("scrolledInvert");
     mobileMenu.classList.add("scrolledInvert");
-  } else if (window.scrollY >= 50 && window.scrollY < window.innerHeight - 50) {
+  } else if (window.scrollY >= 50 && window.scrollY < height * 2 - 50) {
+    // Mellan 50px och två fönsterhöjder
     navbar.classList.add("scrolled");
     navbar.classList.remove("scrolledInvert");
     mobileMenu.classList.remove("scrolledInvert");
   } else {
+    // Mindre än 50px
     navbar.classList.remove("scrolled");
     navbar.classList.remove("scrolledInvert");
     mobileMenu.classList.remove("scrolledInvert");
