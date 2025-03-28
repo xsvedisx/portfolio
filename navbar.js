@@ -13,21 +13,19 @@ window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
   const mobileMenu = document.querySelector(".mobile-menu");
 
-  // Use a lower threshold for mobile devices
-  const threshold = window.innerWidth < 768 ? 5 : 50;
-
-  if (window.scrollY >= window.innerHeight - threshold) {
+  if (window.scrollY >= window.innerHeight - 50) {
     navbar.classList.add("scrolledInvert");
     mobileMenu.classList.add("scrolledInvert");
   } else if (
-    window.scrollY >= threshold &&
-    window.scrollY < window.innerHeight - threshold
+    window.scrollY >= 100 &&
+    window.scrollY <= window.innerHeight - 50
   ) {
     navbar.classList.add("scrolled");
     navbar.classList.remove("scrolledInvert");
     mobileMenu.classList.remove("scrolledInvert");
   } else {
     navbar.classList.remove("scrolled");
+    navbar.classList.remove("scrolledInvert");
     mobileMenu.classList.remove("scrolledInvert");
   }
 });
