@@ -195,6 +195,7 @@ a:active {
   color: white;
   text-align: center;
   scroll-snap-align: start;
+  background-color: transparent;
 }
 
 /* Background Colors for Each Section */
