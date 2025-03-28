@@ -31,6 +31,10 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// Run on page load and on scroll
+window.addEventListener("load", updateNavbar);
+window.addEventListener("scroll", updateNavbar);
+
 document.querySelectorAll(".nav-links a, .mobile-menu a").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault(); // Prevent default anchor click behavior
