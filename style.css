@@ -475,7 +475,7 @@ p {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    background-color: transparent; /* Use your preferred fallback color */
+    background-color: #000000; /* Use your preferred fallback color */
   }
   .profileImg {
     height: 80px;
