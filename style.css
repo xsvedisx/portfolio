@@ -460,10 +460,10 @@ p {
 
 @media (max-width: 1024px) {
   nav {
-    padding: 15px 20px;
+    padding: 20px;
   }
   .scrolled {
-    padding: 15px 20px;
+    padding: 20px;
   }
   .nav-links {
     display: none;
