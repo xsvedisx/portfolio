@@ -18,7 +18,7 @@ window.addEventListener("scroll", function () {
     navbar.classList.add("scrolledInvert");
     mobileMenu.classList.add("scrolledInvert");
   } else if (
-    window.scrollY >= 200 &&
+    window.scrollY >= 50 &&
     window.scrollY <= window.innerHeight - 50
   ) {
     navbar.classList.add("scrolled");
@@ -31,9 +31,13 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// Run on page load and on scroll
-window.addEventListener("load", updateNavbar);
-window.addEventListener("scroll", updateNavbar);
+// Calculate and set the --vh variable
+function setViewportHeight() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+}
+window.addEventListener("resize", setViewportHeight);
+setViewportHeight();
 
 document.querySelectorAll(".nav-links a, .mobile-menu a").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
