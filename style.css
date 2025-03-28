@@ -38,6 +38,7 @@ nav {
 }
 
 .scrolledInvert {
+  background-color: black;
   filter: invert(1);
   box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
 }
