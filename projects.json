@@ -1,0 +1,16 @@
+[
+  {
+    "image": "projects/beautify.png",
+    "title": "BeautifyInjections.se",
+    "languages": ["html", "css3", "JavaScript", "React"],
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam placeat et beatae eaque, omnis labore quos facere tenetur, maiores accusamus tempore quo dignissimos. Cum necessitatibus sequi pariatur. Voluptates, adipisci odio?",
+    "link": "http://xsvedisx.github.io/beautify"
+  },
+  {
+    "image": "projects/beautify.png",
+    "title": "BeautifyInjections.se",
+    "languages": ["html", "css3", "JavaScript", "React"],
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam placeat et beatae eaque, omnis labore quos facere tenetur, maiores accusamus tempore quo dignissimos. Cum necessitatibus sequi pariatur. Voluptates, adipisci odio?",
+    "link": "http://xsvedisx.github.io/beautify"
+  }
+]

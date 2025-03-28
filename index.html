@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="se">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Henrik Svedsäter - Fullstackutvecklare Portfolio</title>
+    <meta
+      name="description"
+      content="Henrik Svedsäter – Fullstackutvecklare med passion för att skapa robusta, användarvänliga och estetiskt tilltalande webbapplikationer. Se portfolio, frilansinfo och kontaktuppgifter."
+    />
+    <meta
+      name="keywords"
+      content="Henrik Svedsäter, Fullstack, Portfolio, Webbutveckling, React, PHP, Frilans, Webbutvecklare, Sverige"
+    />
+    <meta name="author" content="Henrik Svedsäter" />
+    <meta
+      property="og:title"
+      content="Henrik Svedsäter - Fullstackutvecklare Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Se min portfolio och frilansarbeten inom webbutveckling. HTML, CSS, JS, React, PHP och mer."
+    />
+    <meta
+      property="og:image"
+      content="https://xsvedisx.github.io/portfolio/images/HS2.png"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://henriksvedsater.se" />
+    <meta name="robots" content="index, follow" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Henrik Svedsäter",
+        "url": "https://henriksvedsater.se",
+        "image": "https://xsvedisx.github.io/portfolio/images/HS2.png",
+        "sameAs": [
+          "https://github.com/xsvedisx",
+          "https://www.linkedin.com/in/henrik-sveds%C3%A4ter-907863308/"
+        ],
+        "jobTitle": "Fullstackutvecklare",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance"
+        }
+      }
+    </script>
+
+    <link rel="canonical" href="https://angelikaskitchen.se" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&family=M+PLUS+1:wght@100..900&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="logo"><img src="images/HS2White.png" /></div>
+      <div class="nav-links">
+        <a href="#home">Om mig</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#frilans">Frilans</a>
+      </div>
+
+      <!-- Hamburger Menu -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <a href="#home" onclick="closeMenu()">Om mig</a>
+      <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
+      <a href="#frilans" onclick="closeMenu()">Frilans</a>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+      <div id="home" class="section">
+        <!-- Background Video -->
+        <video autoplay loop muted playsinline class="bg-video">
+          <source src="videos/testoo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <img
+          src="images/output.png"
+          class="profileImg"
+          alt="Henrik Svedsäter profilbild"
+        />
+        <div class="profile">
+          <div class="typewriter-container">
+            <span id="typewriter"></span>
+          </div>
+          <h1>HENRIK SVEDSÄTER</h1>
+          <div class="progLangContainer">
+            <div class="progLang">html</div>
+            <div class="progLang">css3</div>
+            <div class="progLang">JavaScript</div>
+            <div class="progLang">React</div>
+            <div class="progLang">Angular</div>
+            <div class="progLang">Node.js</div>
+            <div class="progLang">PHP</div>
+            <div class="progLang">SQL</div>
+            <div class="progLang">MongoDB</div>
+          </div>
+          <h4>
+            <b>Fullstack-utvecklare</b> med en passion för att skapa robusta,
+            användarvänliga, och estetiskt tilltalande webbapplikationer.
+          </h4>
+          <div class="iconsContainer">
+            <a href="https://github.com/xsvedisx/" target="_blank"
+              ><img src="icons/GitHub.png" class="icons" alt="Github"
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/henrik-sveds%C3%A4ter-907863308/"
+              target="_blank"
+              ><img src="icons/linkedin.png" class="icons" alt="LinkedIn"
+            /></a>
+            <a href="mailto:henrik_svedis@hotmail.com" target="_blank"
+              ><img src="icons/mail.png" class="icons2" alt="Email"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <div id="portfolioTitle" class="title">PORTFOLIO</div>
+
+      <div id="portfolio" class="section">
+        <div class="cardContainer" id="cardContainer"></div>
+      </div>
+
+      <div id="frilansTitle" class="title">Frilans</div>
+
+      <div id="frilans" class="section">
+        <div class="frilansContainer">
+          <p>
+            Er digitala närvaro är det första intrycket potentiella kunder möter
+            – och det avgör snabbt om de väljer er eller går vidare. Jag hjälper
+            er att skapa ett omslag som sticker ut, funktionalitet som imponerar
+            och en digital upplevelse som stärker ert varumärke och öppnar
+            dörrar till nya affärer.
+          </p>
+          <a href="#" class="button2"
+            ><img
+              src="icons/mail.png"
+              height="10px"
+              style="filter: invert(1)"
+            />
+            Kontakt</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="typewriter.js" defer></script>
+    <script src="navbar.js" defer></script>
+    <script id="projects-data" type="application/json">
+      [
+        {
+          "image": "projects/ael.png",
+          "title": "Aesthetic Levelup",
+          "languages": ["React", "Node.js", "PostgreSQL"],
+          "description": "<b>PS: Under uppbyggnad.</b> En webbplattform där användare kan logga och analysera sina träningsframsteg genom interaktiv datavisualisering. Fokus på responsiv design och smidig användarupplevelse.",
+          "link": "projects/aelPrint.png"
+        },
+        {
+          "image": "projects/beautify.png",
+          "title": "BeautifyInjections.se",
+          "languages": ["React", "CMS"],
+          "description": "Webbplats för företaget Beautify Injections. Kör bokningssystem via bokadirekt och krävde därför ingen backend. Innehållet hämtas och redigeras via API (headless CMS).",
+          "link": "https://xsvedisx.github.io/beautify"
+        },
+        {
+          "image": "projects/angelika.png",
+          "title": "AngelikasKitchen.se",
+          "languages": ["html", "css", "JavaScript", "PHP", "MySQL"],
+          "description": "Designade och utvecklade en dynamisk receptsida åt en matinfluencer, med fokus på intuitiv användarupplevelse med sök- och sorteringsfunktion.",
+          "link": "https://angelikaskitchen.se"
+        }
+      ]
+    </script>
+    <script src="cards.js"></script>
+  </body>
+</html>
