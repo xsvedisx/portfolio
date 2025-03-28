@@ -9,27 +9,6 @@ function closeMenu() {
   document.querySelector(".hamburger").classList.remove("active");
 }
 
-window.addEventListener("scroll", function () {
-  const navbar = document.querySelector(".navbar");
-  const mobileMenu = document.querySelector(".mobile-menu");
-
-  if (window.scrollY >= window.innerHeight - 50) {
-    navbar.classList.add("scrolledInvert");
-    mobileMenu.classList.add("scrolledInvert");
-  } else if (
-    window.scrollY >= 50 &&
-    window.scrollY <= window.innerHeight - 50
-  ) {
-    navbar.classList.add("scrolled");
-    navbar.classList.remove("scrolledInvert");
-    mobileMenu.classList.remove("scrolledInvert");
-  } else if (this.window.scrollY < 50) {
-    navbar.classList.remove("scrolled");
-    navbar.classList.remove("scrolledInvert");
-    mobileMenu.classList.remove("scrolledInvert");
-  }
-});
-
 document.querySelectorAll(".nav-links a, .mobile-menu a").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault(); // Prevent default anchor click behavior
