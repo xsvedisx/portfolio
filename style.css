@@ -199,7 +199,7 @@ a:active {
 
 /* Background Colors for Each Section */
 #home {
-  height: calc(100vh + 1px);
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: row;
