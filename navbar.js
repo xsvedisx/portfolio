@@ -18,7 +18,6 @@ window.addEventListener("load", function () {
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector("nav");
   const mobileMenu = document.querySelector(".mobile-menu");
-  navbar.classList.remove("scrolled");
 
   if (window.scrollY >= window.innerHeight - 50) {
     navbar.classList.add("scrolledInvert");
