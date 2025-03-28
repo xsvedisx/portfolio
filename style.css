@@ -457,7 +457,7 @@ p {
   margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .navbar {
     padding: 20px;
   }
