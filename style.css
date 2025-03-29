@@ -311,11 +311,11 @@ p {
   white-space: nowrap;
   overflow: hidden;
   color: rgb(255, 255, 255);
-  border-right: 5px solid rgb(255, 255, 255);
+  border-right: 3px solid rgb(255, 255, 255);
   height: 2rem;
   font-size: 1.4rem;
   animation: blink-caret 0.6s step-end infinite;
-  animation: slidedown 1s ease-in-out;
+  animation: opacity 1s ease-in-out;
 }
 
 /* Background Video Styling */

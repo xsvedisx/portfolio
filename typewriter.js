@@ -6,6 +6,7 @@ let isDeleting = false;
 const typingDelay = 150;
 const deletingDelay = 60;
 const pauseDelay = 2000; // Delay before deleting
+const startDelay = 1000; // 1 second delay before starting
 
 function typeEffect() {
   const typewriter = document.getElementById("typewriter");
@@ -37,7 +38,7 @@ function typeEffect() {
   }
 }
 
-// Initialize the typewriter effect
+// Initialize the typewriter effect after a 1-second delay
 document.addEventListener("DOMContentLoaded", () => {
-  typeEffect();
+  setTimeout(typeEffect, startDelay); // Start after 1 second
 });
