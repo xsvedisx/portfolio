@@ -18,25 +18,58 @@ document.addEventListener("DOMContentLoaded", function () {
     card.classList.add("card");
 
     card.innerHTML = `
-            <div class="portfolioImg">
-              <img src="${project.image}" width="100%" alt="${
+      <div class="portfolioImg hidden">
+        <img src="${project.image}" width="100%" alt="${
       project.title
     }" loading="lazy" />
-            </div>
-            <div class="portfolioDescription">
-              <h1 style="color: #0e0e0e">${project.title}</h1>
-              <div class="progLangContainer">
-                ${project.languages
-                  .map((lang) => `<div class="progLang">${lang}</div>`)
-                  .join("")}
-              </div>
-              <p>${project.description}</p>
-              <a href="${
-                project.link
-              }" class="button" target="_blank">→ Besök sidan</a>
-            </div>
-          `;
-
+      </div>
+      <div class="portfolioDescription hidden">
+        <h1 style="color: #0e0e0e">${project.title}</h1>
+        <div class="progLangContainer">
+          ${project.languages
+            .map((lang) => `<div class="progLang">${lang}</div>`)
+            .join("")}
+        </div>
+        <p>${project.description}</p>
+        <a href="${
+          project.link
+        }" class="button" target="_blank">→ Besök sidan</a>
+      </div>
+    `;
     container.appendChild(card);
+  });
+
+  // Function to check if an element is in the viewport
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Add scroll event listener
+  window.addEventListener("scroll", function () {
+    const images = document.querySelectorAll(".portfolioImg.hidden");
+    const descriptions = document.querySelectorAll(
+      ".portfolioDescription.hidden"
+    );
+
+    images.forEach((img) => {
+      if (isInViewport(img)) {
+        img.classList.add("show");
+        img.classList.remove("hidden");
+      }
+    });
+
+    descriptions.forEach((desc) => {
+      if (isInViewport(desc)) {
+        desc.classList.add("show");
+        desc.classList.remove("hidden");
+      }
+    });
   });
 });

@@ -4,7 +4,7 @@ let charIndex = 0;
 let currentText = "";
 let isDeleting = false;
 const typingDelay = 150;
-const deletingDelay = 50;
+const deletingDelay = 60;
 const pauseDelay = 2000; // Delay before deleting
 
 function typeEffect() {
