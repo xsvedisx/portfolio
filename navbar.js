@@ -14,7 +14,7 @@ window.addEventListener("scroll", function () {
   const mobileMenu = document.querySelector(".mobile-menu");
   const height = window.innerHeight;
 
-  if (window.scrollY >= height * 2 - 50) {
+  if (window.scrollY >= height - 50) {
     // Efter två fönsterhöjder
     navbar.classList.add("scrolledInvert");
     mobileMenu.classList.add("scrolledInvert");
