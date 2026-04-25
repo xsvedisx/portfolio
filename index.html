@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="se">
   <head>
     <meta charset="UTF-8" />
@@ -6,11 +6,11 @@
     <title>Henrik Svedsäter - Fullstackutvecklare Portfolio</title>
     <meta
       name="description"
-      content="Henrik Svedsäter – Webbutvecklare / Fullstackutvecklare med passion för att skapa robusta, användarvänliga och estetiskt tilltalande webbapplikationer. Se portfolio, frilansinfo och kontaktuppgifter."
+      content="Henrik Svedsäter – Webbutvecklare / Fullstackutvecklare med passion för att skapa robusta, användarvänliga och estetiskt tilltalande webbapplikationer. Se portfolio, erfarenhet och kontaktuppgifter."
     />
     <meta
       name="keywords"
-      content="Henrik Svedsäter, Fullstack, Portfolio, Webbutveckling, React, PHP, Frilans, Webbutvecklare, Sverige"
+      content="Henrik Svedsäter, Fullstack, Portfolio, Webbutveckling, React, PHP, Webbutvecklare, Sverige"
     />
     <meta name="author" content="Henrik Svedsäter" />
     <meta
@@ -19,7 +19,7 @@
     />
     <meta
       property="og:description"
-      content="Se min portfolio och frilansarbeten inom webbutveckling. HTML, CSS, JS, React, PHP och mer."
+      content="Se min portfolio och tidigare arbete inom webbutveckling. HTML, CSS, JS, React, PHP och mer."
     />
     <meta
       property="og:image"
@@ -55,6 +55,10 @@
       href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&family=M+PLUS+1:wght@100..900&family=Permanent+Marker&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -63,8 +67,8 @@
       <div class="logo"><img src="images/HS2White.png" /></div>
       <div class="nav-links">
         <a href="#home">Om mig</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#frilans">Frilans</a>
+        <a href="#portfolio">Projects</a>
+        <a href="#experience">Experience</a>
       </div>
 
       <!-- Hamburger Menu -->
@@ -78,8 +82,8 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu">
       <a href="#home" onclick="closeMenu()">Om mig</a>
-      <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
-      <a href="#frilans" onclick="closeMenu()">Frilans</a>
+      <a href="#portfolio" onclick="closeMenu()">Projects</a>
+      <a href="#experience" onclick="closeMenu()">Experience</a>
     </div>
 
     <!-- Main Container -->
@@ -91,25 +95,20 @@
           Your browser does not support the video tag.
         </video>
         <div class="profile">
-          <div class="typewriter-container">
-            <span id="typewriter"></span>
-          </div>
+          <p class="heroEyebrow">FULLSTACK DEVELOPER</p>
           <h1>Henrik Svedsäter</h1>
+          <h4>Building reliable, maintainable, and aesthetic software.</h4>
+          <p class="heroTechTitle">Tech Stack</p>
           <div class="progLangContainer">
-            <div class="progLang">html</div>
-            <div class="progLang">css3</div>
-            <div class="progLang">JavaScript</div>
-            <div class="progLang">React</div>
-            <div class="progLang">Angular</div>
-            <div class="progLang">Node.js</div>
-            <div class="progLang">PHP</div>
-            <div class="progLang">SQL</div>
-            <div class="progLang">MongoDB</div>
+            <i class="devicon-javascript-plain"></i>
+            <i class="devicon-react-original"></i>
+            <i class="devicon-nodejs-plain"></i>
+            <i class="devicon-php-plain"></i>
+            <i class="devicon-csharp-plain"></i>
+            <i class="devicon-python-plain"></i>
+            <i class="devicon-mysql-plain"></i>
+            <i class="devicon-microsoftsqlserver-plain"></i>
           </div>
-          <h4>
-            <b>Fullstack-utvecklare</b> med en passion för att skapa robusta,
-            användarvänliga, och estetiskt tilltalande webbapplikationer.
-          </h4>
           <div class="iconsContainer">
             <a href="https://github.com/xsvedisx/" target="_blank"
               ><img src="icons/GitHub.png" class="icons" alt="Github"
@@ -126,58 +125,82 @@
         </div>
       </div>
 
-      <div id="portfolioTitle" class="title">PORTFOLIO</div>
+      <div id="portfolioTitle" class="title">PROJECTS</div>
 
       <div id="portfolio" class="section">
         <div class="cardContainer" id="cardContainer"></div>
       </div>
 
-      <div id="frilansTitle" class="title">Frilans</div>
+      <div id="experience" class="section">
+        <div class="experienceContainer">
+          <p class="experienceLead"><b>EXPERIENCE</b></p>
+          <div class="experienceTimeline">
+            <article class="experienceItem">
+              <span class="experiencePeriod">2025 - Present</span>
+              <h3>Software Engineer Car-O-Liner</h3>
+              <p>
+                Developing and maintaing software for a camera- and laser-based
+                wheel alignment measurement system.
+              </p>
+              <div class="experienceTags">
+                <span>C#</span>
+                <span>Azure Devops</span>
+                <span>React</span>
+                <span>SQL</span>
+              </div>
+            </article>
 
-      <div id="frilans" class="section">
-        <div class="frilansContainer">
-          <p>
-            Er digitala närvaro är det första intrycket många potentiella kunder
-            möter – och det avgör snabbt om de väljer er eller letar vidare. Jag
-            hjälper er att skapa ett omslag som sticker ut, funktionalitet som
-            imponerar och en digital upplevelse som stärker ert varumärke och
-            öppnar dörrar till nya affärer.
-          </p>
-          <a href="#" class="button2"
-            ><img
-              src="icons/mail.png"
-              height="10px"
-              style="filter: invert(1)"
-            />
-            Kontakt</a
-          >
+            <article class="experienceItem">
+              <span class="experiencePeriod">2021 - 2024</span>
+              <h3>BSc Computer Science Örebro University</h3>
+              <p>
+                Completed a Bachelor's degree in Computer Science with a focus
+                on mathematics, software development, algorithms and data
+                structures, and system design.
+              </p>
+            </article>
+
+            <article class="experienceItem">
+              <span class="experiencePeriod">2006 - 2021</span>
+              <h3>Freelance Web Development</h3>
+              <p>Completed occasional freelance projects as a web developer.</p>
+              <div class="experienceTags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>PHP</span>
+                <span>MYSQL</span>
+                <span>MongoDB</span>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </div>
 
-    <script src="typewriter.js" defer></script>
     <script src="navbar.js" defer></script>
     <script id="projects-data" type="application/json">
       [
         {
-          "image": "projects/ael.png",
-          "title": "Aesthetic Levelup",
-          "languages": ["React", "Node.js", "PostgreSQL"],
-          "description": "<b>PS: Under uppbyggnad.</b> En webbplattform där användare kan logga och analysera sina träningsframsteg genom interaktiv datavisualisering. Fokus på responsiv design och smidig användarupplevelse.",
-          "link": "projects/aelPrint.png"
+          "image": "projects/gameTest.png",
+          "title": "Top-down shooter prototype",
+          "languages": ["JavaScript", "Three.js", "Blender"],
+          "description": "Made a wave spawner top-down shooter prototype for a bigger game.",
+          "link": "https://xsvedisx.github.io/GameTest/"
         },
         {
-          "image": "projects/beautify.png",
+          "image": "projects/coleda.png",
           "title": "coleda.se",
-          "languages": ["JavaScript", "html/css"],
-          "description": "Webbplats för företaget Coleda estetik. Kör bokningssystem via bokadirekt och krävde därför ingen egen backendlösning.",
+          "languages": ["JavaScript", "html", "css3"],
+          "description": "Landing page for Coleda Estetik. Integrated a third-party booking system (BokaDirekt), removing the need for a custom backend solution.",
           "link": "https://coleda.se"
         },
         {
-          "image": "projects/angelika.png",
+          "image": "projects/akNew.png",
           "title": "AngelikasKitchen.se",
-          "languages": ["html", "css", "JavaScript", "PHP", "MySQL"],
-          "description": "Designade och utvecklade en dynamisk receptsida åt en matinfluencer, med fokus på intuitiv användarupplevelse med sök- och sorteringsfunktion.",
+          "languages": ["html", "css", "JavaScript"],
+          "description": "Designed and developed a website for a recipe influencer.",
           "link": "https://angelikaskitchen.se"
         }
       ]
