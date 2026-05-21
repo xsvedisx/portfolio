@@ -268,10 +268,11 @@ a:active {
 }
 
 .experienceItem {
+  --experience-bg: none;
   position: relative;
   padding: 16px;
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.06);
+  background-color: rgba(255, 255, 255, 0.06);
   text-align: left;
   backdrop-filter: blur(4px);
   transition:
@@ -279,20 +280,69 @@ a:active {
     background-color 0.25s ease;
 }
 
+.experienceSoftware {
+  --experience-bg: url("images/experience-software.png");
+}
+
+.experienceEducation {
+  --experience-bg: url("images/experience-education.png");
+}
+
+.experienceFreelance {
+  --experience-bg: url("images/experience-freelance.png");
+}
+
+.experienceItem > * {
+  position: relative;
+  z-index: 1;
+}
+
 .experienceItem::before {
   content: "";
   position: absolute;
-  left: -30px;
+  left: -27px;
   top: 22px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background: #ffffff;
+  z-index: 2;
+}
+
+.experienceItem::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(18, 18, 18, 0.98) 0%,
+      rgba(18, 18, 18, 0.92) 48%,
+      rgba(18, 18, 18, 0.7) 100%
+    ),
+    var(--experience-bg);
+  background-position: center;
+  background-size: cover;
+  clip-path: inset(0 round 14px);
+  opacity: 0.75;
+  transform: scale(1);
+  transition:
+    opacity 0.25s ease,
+    transform 0.35s ease,
+    filter 0.25s ease;
+  z-index: 0;
 }
 
 .experienceItem:hover {
   transform: translateY(-4px);
   background: rgba(255, 255, 255, 0.1);
+}
+
+.experienceItem:hover::after {
+  opacity: 0.92;
+  transform: scale(1.035);
+  filter: saturate(1.08) brightness(1.08);
 }
 
 .experiencePeriod {
@@ -698,7 +748,7 @@ p {
     padding-left: 15px;
   }
   .experienceItem::before {
-    left: -24px;
+    left: -22px;
   }
   .project-media img {
     height: 180px;
