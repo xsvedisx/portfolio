@@ -37,7 +37,6 @@
         "url": "https://henriksvedsater.se",
         "image": "https://xsvedisx.github.io/portfolio/images/HS2.png",
         "sameAs": [
-          "https://github.com/xsvedisx",
           "https://www.linkedin.com/in/henrik-sveds%C3%A4ter-907863308/"
         ],
         "jobTitle": "Fullstackutvecklare",
@@ -66,7 +65,7 @@
     <nav>
       <div class="logo"><img src="images/HS2White.png" /></div>
       <div class="nav-links">
-        <a href="#home">Om mig</a>
+        <a href="#about" data-open-about>Om mig</a>
         <a href="#portfolio">Projects</a>
         <a href="#experience">Experience</a>
       </div>
@@ -81,7 +80,7 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu">
-      <a href="#home" onclick="closeMenu()">Om mig</a>
+      <a href="#about" data-open-about onclick="closeMenu()">Om mig</a>
       <a href="#portfolio" onclick="closeMenu()">Projects</a>
       <a href="#experience" onclick="closeMenu()">Experience</a>
     </div>
@@ -95,47 +94,75 @@
           Your browser does not support the video tag.
         </video>
         <div class="profile">
-          <p class="heroEyebrow">FULLSTACK DEVELOPER</p>
+          <p class="heroBadge"><span class="heroDot"></span>Software Engineer at Car-O-Liner</p>
           <h1>Henrik Svedsäter</h1>
-          <h4>Building reliable, maintainable, and aesthetic software.</h4>
-          <p class="heroTechTitle">Tech Stack</p>
-          <div class="progLangContainer">
-            <i class="devicon-javascript-plain"></i>
-            <i class="devicon-react-original"></i>
-            <i class="devicon-nodejs-plain"></i>
-            <i class="devicon-php-plain"></i>
-            <i class="devicon-csharp-plain"></i>
-            <i class="devicon-python-plain"></i>
-            <i class="devicon-mysql-plain"></i>
-            <i class="devicon-microsoftsqlserver-plain"></i>
-          </div>
-          <div class="iconsContainer">
-            <a href="https://github.com/xsvedisx/" target="_blank"
-              ><img src="icons/GitHub.png" class="icons" alt="Github"
-            /></a>
-            <a
-              href="https://www.linkedin.com/in/henrik-sveds%C3%A4ter-907863308/"
-              target="_blank"
-              ><img src="icons/linkedin.png" class="icons" alt="LinkedIn"
-            /></a>
-            <a href="mailto:henrik_svedis@hotmail.com" target="_blank"
-              ><img src="icons/mail.png" class="icons2" alt="Email"
-            /></a>
+          <h4>Fullstack developer building reliable, maintainable, and aesthetic software.</h4>
+          <ul class="heroStack" aria-label="Tech stack">
+            <li><i class="devicon-csharp-plain"></i>C#</li>
+            <li><i class="devicon-react-original"></i>React</li>
+            <li><i class="devicon-javascript-plain"></i>JavaScript</li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3" /><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5" /><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" /></svg>Databases
+            </li>
+          </ul>
+          <div class="heroActions">
+            <a href="#portfolioTitle" class="heroBtn heroBtnPrimary">View projects</a>
+            <button type="button" class="heroBtn" data-open-about>About me</button>
+            <a href="cv/Henrik_Sveds%C3%A4ter_CV.pdf" target="_blank" class="heroBtn">CV</a>
+            <a href="mailto:henrik_svedis@hotmail.com" class="heroBtn heroBtnIcon" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
+            </a>
           </div>
         </div>
+        <a href="#portfolioTitle" class="scrollHint" aria-label="Scroll to projects"></a>
       </div>
 
       <div id="portfolioTitle" class="title">PROJECTS</div>
 
       <div id="portfolio" class="section">
-        <div class="cardContainer" id="cardContainer"></div>
+        <article class="featured-project">
+          <div class="slider" data-slider tabindex="0" aria-label="Game screenshots">
+            <div class="slider-track">
+              <figure><img src="projects/game/game-1.webp" alt="Turn-based battle against ravens in the snow" /></figure>
+              <figure><img src="projects/game/game-2.webp" alt="Hero standing before a giant stone statue under a snowy sky" loading="lazy" /></figure>
+              <figure><img src="projects/game/game-3.webp" alt="Blacksmith dialogue with weapon upgrade options in a snowy village" loading="lazy" /></figure>
+              <figure><img src="projects/game/game-4.webp" alt="Party menu showing characters and the Valkyrie's Choice rune" loading="lazy" /></figure>
+            </div>
+            <button class="slider-btn slider-prev" type="button" aria-label="Previous image">&#8249;</button>
+            <button class="slider-btn slider-next" type="button" aria-label="Next image">&#8250;</button>
+            <div class="slider-dots"></div>
+          </div>
+          <div class="featured-content">
+            <p class="featured-eyebrow">Featured project · In development</p>
+            <h3>Untitled Norse JRPG</h3>
+            <p>
+              A story-driven JRPG inspired by Norse mythology. Lead a party of
+              three heroes through frozen villages, ancient ruins and
+              raven-haunted cliffs in a world where the old gods are watching.
+            </p>
+            <p>
+              Combat is turn-based with an action point system, a visible turn
+              order and finishing-blow bonuses. Characters grow through runes
+              that are equipped using a limited Resonance budget or carved
+              permanently into weapons at the forge, opening up different
+              builds for every party member.
+            </p>
+            <div class="experienceTags">
+              <span>Unity</span>
+              <span>C#</span>
+              <span>Blender</span>
+              <span>ElevenLabs</span>
+              <span>Tripo</span>
+            </div>
+          </div>
+        </article>
       </div>
 
       <div id="experience" class="section">
         <div class="experienceContainer">
           <p class="experienceLead"><b>EXPERIENCE</b></p>
           <div class="experienceTimeline">
-            <article class="experienceItem">
+            <article class="experienceItem experienceSoftware">
               <span class="experiencePeriod">2025 - Present</span>
               <h3>Software Engineer Car-O-Liner</h3>
               <p>
@@ -150,7 +177,7 @@
               </div>
             </article>
 
-            <article class="experienceItem">
+            <article class="experienceItem experienceEducation">
               <span class="experiencePeriod">2021 - 2024</span>
               <h3>BSc Computer Science Örebro University</h3>
               <p>
@@ -160,7 +187,7 @@
               </p>
             </article>
 
-            <article class="experienceItem">
+            <article class="experienceItem experienceFreelance">
               <span class="experiencePeriod">2006 - 2021</span>
               <h3>Freelance Web Development</h3>
               <p>Completed occasional freelance projects as a web developer.</p>
@@ -179,32 +206,32 @@
       </div>
     </div>
 
+
+    <!-- About modal -->
+    <dialog id="aboutModal" class="aboutModal" aria-labelledby="aboutModalTitle">
+      <button type="button" class="aboutClose" aria-label="Close">&times;</button>
+      <p class="heroEyebrow">About me</p>
+      <h2 id="aboutModalTitle">Henrik Svedsäter</h2>
+      <p>
+        I'm a software engineer from Sweden with a BSc in Computer Science from
+        Örebro University. Today I build software for camera- and laser-based
+        measurement systems at Car-O-Liner.
+      </p>
+      <p>
+        I've been building things for the web since I was a kid, and over the
+        years that turned into freelance work, a degree and a career in software
+        development. I enjoy the whole stack, from database design to the small
+        details in a user interface.
+      </p>
+      <p>
+        In my spare time I'm developing a JRPG inspired by Norse mythology in
+        Unity, where I get to combine programming, 3D, game design and
+        storytelling.
+      </p>
+    </dialog>
+
     <script src="navbar.js" defer></script>
-    <script id="projects-data" type="application/json">
-      [
-        {
-          "image": "projects/gameTest.png",
-          "title": "Top-down shooter prototype",
-          "languages": ["JavaScript", "Three.js", "Blender"],
-          "description": "Made a wave spawner top-down shooter prototype for a bigger game.",
-          "link": "https://xsvedisx.github.io/GameTest/"
-        },
-        {
-          "image": "projects/coleda.png",
-          "title": "coleda.se",
-          "languages": ["JavaScript", "html", "css3"],
-          "description": "Landing page for Coleda Estetik. Integrated a third-party booking system (BokaDirekt), removing the need for a custom backend solution.",
-          "link": "https://coleda.se"
-        },
-        {
-          "image": "projects/akNew.png",
-          "title": "AngelikasKitchen.se",
-          "languages": ["html", "css", "JavaScript"],
-          "description": "Designed and developed a website for a recipe influencer.",
-          "link": "https://angelikaskitchen.se"
-        }
-      ]
-    </script>
-    <script src="cards.js"></script>
+    <script src="about.js" defer></script>
+    <script src="slider.js" defer></script>
   </body>
 </html>
