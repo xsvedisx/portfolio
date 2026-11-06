@@ -124,31 +124,39 @@
 
       <div id="portfolio" class="section">
         <article class="featured-project">
-          <div class="slider" data-slider tabindex="0" aria-label="Game screenshots">
+          <div class="slider" data-slider tabindex="0" aria-label="Game showreel and screenshots">
             <div class="slider-track">
-              <figure><img src="projects/game/game-1.webp" alt="Turn-based battle against ravens in the snow" /></figure>
-              <figure><img src="projects/game/game-2.webp" alt="Hero standing before a giant stone statue under a snowy sky" loading="lazy" /></figure>
-              <figure><img src="projects/game/game-3.webp" alt="Blacksmith dialogue with weapon upgrade options in a snowy village" loading="lazy" /></figure>
-              <figure><img src="projects/game/game-4.webp" alt="Party menu showing characters and the Valkyrie's Choice rune" loading="lazy" /></figure>
+              <figure class="slide-video">
+                <video controls playsinline preload="metadata" poster="projects/game/showreel-poster.webp">
+                  <source src="videos/showreel.mp4" type="video/mp4" />
+                </video>
+              </figure>
+              <figure><img src="projects/game/game-1.webp" alt="Hero standing before a giant stone statue under a snowy sky" loading="lazy" /></figure>
+              <figure><img src="projects/game/game-2.webp" alt="Talking to the blacksmith in a snowy Norse village" loading="lazy" /></figure>
+              <figure><img src="projects/game/game-3.webp" alt="Hero on a snowy pier next to a Viking longship" loading="lazy" /></figure>
             </div>
-            <button class="slider-btn slider-prev" type="button" aria-label="Previous image">&#8249;</button>
-            <button class="slider-btn slider-next" type="button" aria-label="Next image">&#8250;</button>
+            <button class="slider-btn slider-prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg></button>
+            <button class="slider-btn slider-next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg></button>
             <div class="slider-dots"></div>
           </div>
           <div class="featured-content">
             <p class="featured-eyebrow">Featured project · In development</p>
-            <h3>Untitled Norse JRPG</h3>
+            <h3>Untitled Norse Turn-based RPG</h3>
             <p>
-              A story-driven JRPG inspired by Norse mythology. Lead a party of
-              three heroes through frozen villages, ancient ruins and
-              raven-haunted cliffs in a world where the old gods are watching.
+              This year, winter came early to the north. With it came creatures
+              from tales half-forgotten, things the old folk swore were only
+              stories. As old conflicts reignite and those in power make their
+              moves, something stirs beneath the ice, and the old gods are
+              watching to see who will answer.
             </p>
             <p>
-              Combat is turn-based with an action point system, a visible turn
-              order and finishing-blow bonuses. Characters grow through runes
-              that are equipped using a limited Resonance budget or carved
-              permanently into weapons at the forge, opening up different
-              builds for every party member.
+              A story-driven JRPG inspired by Norse mythology, with turn-based
+              combat rooted in the classics and given a modern touch.
+            </p>
+            <p>
+              Built solo in Unity. AI tools help bring the world to life, from
+              3D models and assets to voice lines. Design, story and direction
+              are my own.
             </p>
             <div class="experienceTags">
               <span>Unity</span>

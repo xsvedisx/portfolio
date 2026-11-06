@@ -25,6 +25,12 @@ document.querySelectorAll("[data-slider]").forEach((slider) => {
   function update(index) {
     current = index;
     dots.forEach((d, i) => d.setAttribute("aria-current", i === index));
+    // pause any video that is no longer the visible slide
+    slides.forEach((slide, i) => {
+      const video = slide.querySelector("video");
+      if (video && i !== index && !video.paused) video.pause();
+    });
+    slider.classList.toggle("is-video", !!slides[index].querySelector("video"));
   }
 
   const observer = new IntersectionObserver(
@@ -40,6 +46,7 @@ document.querySelectorAll("[data-slider]").forEach((slider) => {
   prev.addEventListener("click", () => goTo(current - 1));
   next.addEventListener("click", () => goTo(current + 1));
   slider.addEventListener("keydown", (e) => {
+    if (e.target.tagName === "VIDEO") return; // let the video use arrow keys
     if (e.key === "ArrowLeft") goTo(current - 1);
     if (e.key === "ArrowRight") goTo(current + 1);
   });
