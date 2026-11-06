@@ -98,7 +98,7 @@
           <h1>Henrik Svedsäter</h1>
           <h4>Fullstack developer building reliable, maintainable, and aesthetic software.</h4>
           <ul class="heroStack" aria-label="Tech stack">
-            <li><i class="devicon-csharp-plain"></i>C# / .NET / ASP.NET</li>
+            <li><i class="devicon-csharp-plain"></i>C# / .NET</li>
             <li><i class="devicon-react-original"></i>React</li>
             <li><i class="devicon-javascript-plain"></i>JavaScript</li>
             <li>
@@ -118,7 +118,10 @@
         <a href="#portfolioTitle" class="scrollHint" aria-label="Scroll to projects"></a>
       </div>
 
-      <div id="portfolioTitle" class="title">PROJECTS</div>
+      <div id="portfolioTitle" class="sectionHead sectionHeadLight">
+        <p class="sectionEyebrow">Projects</p>
+        <h2>What I'm building</h2>
+      </div>
 
       <div id="portfolio" class="section">
         <article class="featured-project">
@@ -161,47 +164,70 @@
 
       <div id="experience" class="section">
         <div class="experienceContainer">
-          <p class="experienceLead"><b>EXPERIENCE</b></p>
+          <div class="sectionHead">
+            <p class="sectionEyebrow">Experience</p>
+            <h2>Work &amp; education</h2>
+          </div>
           <div class="experienceTimeline">
-            <article class="experienceItem experienceSoftware">
-              <span class="experiencePeriod">2025 - Present</span>
-              <h3>Software Engineer Car-O-Liner</h3>
-              <p>
-                Developing and maintaing software for a camera- and laser-based
-                wheel alignment measurement system.
-              </p>
-              <div class="experienceTags">
-                <span>C#</span>
-                <span>Azure Devops</span>
-                <span>React</span>
-                <span>SQL</span>
+            <div class="experienceRow reveal">
+              <div class="experienceWhen">
+                <span class="experiencePeriod">2025 – Present</span>
+                <span class="experienceType">Work</span>
               </div>
-            </article>
+              <article class="experienceItem experienceSoftware">
+                <span class="experienceNow"><span class="heroDot"></span>Current role</span>
+                <h3>Software Engineer</h3>
+                <p class="experienceOrg">Car-O-Liner</p>
+                <p>
+                  Developing and maintaining software for a camera- and
+                  laser-based wheel alignment measurement system.
+                </p>
+                <div class="experienceTags">
+                  <span>C#</span>
+                  <span>.NET</span>
+                  <span>React</span>
+                  <span>SQL</span>
+                  <span>Azure DevOps</span>
+                </div>
+              </article>
+            </div>
 
-            <article class="experienceItem experienceEducation">
-              <span class="experiencePeriod">2021 - 2024</span>
-              <h3>BSc Computer Science Örebro University</h3>
-              <p>
-                Completed a Bachelor's degree in Computer Science with a focus
-                on mathematics, software development, algorithms and data
-                structures, and system design.
-              </p>
-            </article>
-
-            <article class="experienceItem experienceFreelance">
-              <span class="experiencePeriod">2006 - 2021</span>
-              <h3>Freelance Web Development</h3>
-              <p>Completed occasional freelance projects as a web developer.</p>
-              <div class="experienceTags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>React</span>
-                <span>PHP</span>
-                <span>MYSQL</span>
-                <span>MongoDB</span>
+            <div class="experienceRow reveal">
+              <div class="experienceWhen">
+                <span class="experiencePeriod">2021 – 2024</span>
+                <span class="experienceType">Education</span>
               </div>
-            </article>
+              <article class="experienceItem experienceEducation">
+                <h3>BSc Computer Science</h3>
+                <p class="experienceOrg">Örebro University</p>
+                <p>
+                  Bachelor's degree in Computer Science with a focus on
+                  mathematics, software development, algorithms and data
+                  structures, and system design.
+                </p>
+              </article>
+            </div>
+
+            <div class="experienceRow reveal">
+              <div class="experienceWhen">
+                <span class="experiencePeriod">2006 – 2021</span>
+                <span class="experienceType">Freelance</span>
+              </div>
+              <article class="experienceItem experienceFreelance">
+                <h3>Web Developer</h3>
+                <p class="experienceOrg">Freelance</p>
+                <p>Completed occasional freelance projects as a web developer.</p>
+                <div class="experienceTags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>React</span>
+                  <span>PHP</span>
+                  <span>MySQL</span>
+                  <span>MongoDB</span>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </div>
@@ -233,6 +259,7 @@
 
     <script src="navbar.js" defer></script>
     <script src="about.js" defer></script>
+    <script src="reveal.js" defer></script>
     <script src="slider.js" defer></script>
   </body>
 </html>

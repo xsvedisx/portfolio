@@ -1074,15 +1074,15 @@ body:has(.aboutModal[open]) {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #4ade80;
-  box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6);
+  background: #ffffff;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.55);
   animation: heroPulse 2.2s infinite;
 }
 
 @keyframes heroPulse {
-  0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.55); }
-  70% { box-shadow: 0 0 0 8px rgba(74, 222, 128, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.55); }
+  70% { box-shadow: 0 0 0 8px rgba(255, 255, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
 }
 
 .heroStack {
@@ -1213,5 +1213,268 @@ body:has(.aboutModal[open]) {
   .heroDot,
   .scrollHint {
     animation: none;
+  }
+}
+
+/* ===== Section headings ===== */
+.sectionHead {
+  text-align: center;
+  margin: 0 auto 40px;
+}
+
+.sectionHead .sectionEyebrow {
+  margin: 0 0 8px;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8f8f8f;
+}
+
+.sectionHead h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.sectionHeadLight {
+  padding: 70px 20px 0;
+  margin-bottom: 0;
+}
+
+.sectionHeadLight h2 {
+  color: #121212;
+}
+
+/* ===== Experience (redesign) ===== */
+#experience {
+  padding: 90px 25px 100px;
+  background:
+    radial-gradient(circle at 15% 0%, #222222, transparent 55%),
+    #070707;
+}
+
+.experienceContainer {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.experienceTimeline {
+  --when-col: 170px;
+  --rail-gap: 48px;
+  position: relative;
+  display: grid;
+  gap: 28px;
+  padding-left: 0;
+  border-left: 0;
+}
+
+/* vertical rail */
+.experienceTimeline::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: calc(var(--when-col) + var(--rail-gap) / 2);
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.08)
+  );
+}
+
+.experienceRow {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--when-col) 1fr;
+  column-gap: var(--rail-gap);
+  align-items: start;
+}
+
+/* timeline dot */
+.experienceRow::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: calc(var(--when-col) + var(--rail-gap) / 2 - 6px);
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #070707;
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.experienceRow:first-child::before {
+  background: #ffffff;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.12);
+}
+
+.experienceWhen {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  padding-top: 18px;
+  text-align: right;
+}
+
+.experienceWhen .experiencePeriod {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: #ffffff;
+}
+
+.experienceType {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+}
+
+.experienceItem {
+  padding: 22px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.experienceItem::before {
+  content: none;
+}
+
+.experienceItem:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.experienceItem h3 {
+  font-size: 1.35rem;
+  color: #ffffff;
+}
+
+.experienceOrg {
+  margin: 2px 0 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #a8a8a8;
+}
+
+.experienceItem p:not(.experienceOrg) {
+  margin: 0;
+  max-width: 62ch;
+  line-height: 1.6;
+  color: #d4d4d4;
+}
+
+.experienceNow {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.35);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #e6e6e6;
+}
+
+.experienceTags {
+  margin-top: 16px;
+}
+
+.experienceTags span {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #f0f0f0;
+  padding: 4px 11px;
+}
+
+/* scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+.experienceRow.reveal:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.experienceRow.reveal:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+@media (max-width: 1024px) {
+  #experience {
+    padding: 60px 16px 70px;
+  }
+
+  .experienceTimeline {
+    --when-col: 0px;
+    --rail-gap: 0px;
+    padding-left: 26px;
+  }
+
+  .experienceTimeline::before {
+    left: 6px;
+  }
+
+  .experienceRow {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+
+  .experienceRow::before {
+    left: -26px;
+    top: 4px;
+  }
+
+  .experienceWhen {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+    padding-top: 0;
+    text-align: left;
+  }
+
+  .experienceItem {
+    padding: 18px;
+  }
+
+  .experienceNow {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-bottom: 10px;
+  }
+
+  .sectionHeadLight {
+    padding-top: 50px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
