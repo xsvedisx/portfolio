@@ -88,57 +88,48 @@
     <!-- Main Container -->
     <div class="container">
       <div id="home" class="section">
-        <!-- Background Video -->
-        <video autoplay loop muted playsinline class="bg-video">
+        <video class="bg-video" autoplay loop muted playsinline aria-hidden="true">
           <source src="videos/testoo.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
-        <div class="profile">
-          <p class="heroBadge">
-            <span class="heroDot"></span>Software Engineer at Car-O-Liner
-          </p>
-          <h1>Henrik Svedsäter</h1>
-          <h4>I love bringing great ideas to life through code.</h4>
-          <ul class="heroStack" aria-label="Tech stack">
-            <li><i class="devicon-csharp-plain"></i>C# / .NET</li>
-            <li><i class="devicon-react-original"></i>React</li>
-            <li><i class="devicon-javascript-plain"></i>JavaScript</li>
-            <li>
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <ellipse cx="12" cy="5" rx="8" ry="3" />
-                <path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5" />
-                <path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" /></svg
-              >Databases
-            </li>
-            <li><i class="devicon-azuredevops-plain"></i>Azure DevOps</li>
-          </ul>
-          <div class="heroActions">
-            <button type="button" class="heroBtn" data-open-about>
-              About me
-            </button>
-            <a
-              href="cv/Henrik_Sveds%C3%A4ter_CV.pdf"
-              target="_blank"
-              class="heroBtn heroBtnPrimary"
-              >CV</a
-            >
-            <a
-              href="mailto:henrik_svedis@hotmail.com"
-              class="heroBtn heroBtnIcon"
-              aria-label="Email"
-            >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="3" y="5" width="18" height="14" rx="2" />
-                <path d="m3 7 9 6 9-6" />
-              </svg>
-            </a>
+        <div class="heroLayout">
+          <div class="heroIntro">
+            <p class="heroRole">Software Engineer at Car-O-Liner</p>
+            <h1>Henrik <span>Svedsäter</span></h1>
+            <p class="heroLead">I love bringing great ideas to life through code.</p>
+            <div class="heroActions">
+              <button type="button" class="heroBtn" data-open-about>
+                About me
+              </button>
+              <a class="heroBtn heroBtnWatch" href="#portfolioTitle">Projects</a>
+              <a
+                href="cv/Henrik_Sveds%C3%A4ter_CV.pdf"
+                target="_blank"
+                class="heroBtn"
+                >CV</a
+              >
+            </div>
+          </div>
+          <a class="heroProject" href="#portfolio">
+            <span>Featured project</span>
+            <strong>Untitled Norse Turn-based RPG</strong>
+          </a>
+          <div class="heroTools">
+            <p>Tech stack</p>
+            <ul class="heroStack" aria-label="Tech stack">
+              <li><i class="devicon-csharp-plain"></i>C# / .NET</li>
+              <li><i class="devicon-react-original"></i>React</li>
+              <li><i class="devicon-javascript-plain"></i>JavaScript</li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <ellipse cx="12" cy="5" rx="8" ry="3" />
+                  <path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5" />
+                  <path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" /></svg
+                >Databases
+              </li>
+              <li><i class="devicon-azuredevops-plain"></i>Azure DevOps</li>
+            </ul>
           </div>
         </div>
-        <a
-          href="#portfolioTitle"
-          class="scrollHint"
-          aria-label="Scroll to projects"
-        ></a>
       </div>
 
       <div id="portfolioTitle" class="sectionHead sectionHeadLight">
