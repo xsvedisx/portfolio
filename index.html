@@ -65,7 +65,7 @@
     <nav>
       <div class="logo"><img src="images/HS2White.png" /></div>
       <div class="nav-links">
-        <a href="#about" data-open-about>Om mig</a>
+        <a href="#about" data-open-about>About</a>
         <a href="#portfolio">Projects</a>
         <a href="#experience">Experience</a>
       </div>
@@ -80,7 +80,7 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu">
-      <a href="#about" data-open-about onclick="closeMenu()">Om mig</a>
+      <a href="#about" data-open-about onclick="closeMenu()">About</a>
       <a href="#portfolio" onclick="closeMenu()">Projects</a>
       <a href="#experience" onclick="closeMenu()">Experience</a>
     </div>
@@ -88,19 +88,30 @@
     <!-- Main Container -->
     <div class="container">
       <div id="home" class="section">
-        <video class="bg-video" autoplay loop muted playsinline aria-hidden="true">
+        <video
+          class="bg-video"
+          autoplay
+          loop
+          muted
+          playsinline
+          aria-hidden="true"
+        >
           <source src="videos/testoo.mp4" type="video/mp4" />
         </video>
         <div class="heroLayout">
           <div class="heroIntro">
             <p class="heroRole">Software Engineer at Car-O-Liner</p>
             <h1>Henrik <span>Svedsäter</span></h1>
-            <p class="heroLead">I love bringing great ideas to life through code.</p>
+            <p class="heroLead">
+              I love bringing great ideas to life through code.
+            </p>
             <div class="heroActions">
               <button type="button" class="heroBtn" data-open-about>
                 About me
               </button>
-              <a class="heroBtn heroBtnWatch" href="#portfolioTitle">Projects</a>
+              <a class="heroBtn heroBtnWatch" href="#portfolioTitle"
+                >Projects</a
+              >
               <a
                 href="cv/Henrik_Sveds%C3%A4ter_CV.pdf"
                 target="_blank"
